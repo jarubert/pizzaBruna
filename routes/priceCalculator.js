@@ -19,24 +19,19 @@
     // 	return price;
     // }
 
-    'use strict'
+class PriceCalculator{
 
-    class PriceCalculator{
+     constructor(crust, size, topping){
+        this.topping = topping;
+        this.crust = crust;
+        this.size = size;
+     }
 
- constructor(crust, size, topping){
+     calculate(){
+        totalPrice = (topping + crust + size ) * 1.12;
 
- 	console.log("chegou na classe");
-
-    this.topping = topping ;
-    this.crust = crust ;
-    this.size = size;
- }
-
- calculate(){
-    totalPrice = (topping + crust + size ) * 1.12;
-
-    return totalPrice;
- }
+        return totalPrice;
+     }
 }
 
-module.exports = PriceCalculator;
+exports.PriceCalculator = PriceCalculator;
