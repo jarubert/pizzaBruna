@@ -38,7 +38,6 @@ router.post('/', function(req, res, next){
 
     var priceCalculator = new PriceCalculator(crust, size, toppingValue);
 
-    console.log(crust + " "+ size + " "+ toppingValue);
 
     // Result data
     resultData = {
