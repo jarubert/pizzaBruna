@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pizza Order</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <!-- Page Header -->
+    <header>
+        <img src='/images/pizza_banner.jpg'/>
+    
+    </header>
+
+    <!-- Main Content -->
+    <h1> Order online </h1>
+
+
+    <h2>Place your order here:</h2>
+
+
+    <h3>Fill out your information for deliver:</h3>
+
+    <form method="post" action="/confirm" name='order'>
+        <div id="info">
+            First Name:
+            <br/>
+            <input name="firstName" type="text" placeholder="First Name" value="">
+            <br/>
+            Last Name:
+            <br/>
+            <input name="lastName" type="text" placeholder="Last Name" value="">
+            <br/>
+            Phone Number:
+            <br/>
+            <input name="phone" type="text" placeholder="Phone Number" max value="">
+            <br/>
+            E-mail:
+            <br/>
+            <input name="email" type="text" placeholder="E-mail" max value="">
+            <br/>
+            Address:
+            <br/>
+            <input name="address" type="text" placeholder="Address" value="">
+        </div>
+
+        <div id="order">
+
+
+            <h4> Choose your crust:</h4>
+            <select name="crust">
+            	<% for (var crust in crusts) { %>
+	              <option value="<%= crust %>"><%=crust %></option>
+	            <% } %>
+            </select>
+
+
+            <h4> Choose your size:</h4>
+            <select name="size">
+                <% for (var size in sizes) { %>
+                   <option value="<%= size %>"><%=size %></option>
+                <% } %>
+            </select>
+
+
+            <h4> Select your toppings:</h4>
+			<% for (var topping in toppings) { %>
+            	<input type="checkbox" name="<%=topping %>" value="1"> <%=topping %>
+            	<br>
+            <% } %>
+
+            <br>
+            <div id="submit">
+                <button type="submit">Submit</button>
+            </div>
+
+        </div>
+
+    </form>
+    <div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+</body>
+</html>

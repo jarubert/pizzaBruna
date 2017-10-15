@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Pizza Order - NodeJS</title>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <!-- Page Header -->
+
+    <header>
+        <img src='/images/pizza_banner.jpg'/>
+    </header>
+    
+
+    <!-- Main Content -->
+    <h1> Order online </h1>
+
+
+    <h2>Your order is complete:</h2>
+
+    <h3>
+        <%=formData.firstName%> <%=formData.lastName%>
+    </h3>
+    
+    <p>
+        <%=formData.email%>
+    </p>
+
+    <h2> Your size:</h2>
+    <h3>
+        <%=formData.size%>
+    </h3>
+
+    <h2> Your crust:</h2>
+    <h3>
+        <%=formData.crust%>
+    </h3>
+
+    <h2> Your toppings:</h2>
+    <ul>
+        <% for (var i = 0; i < chosenToppings.length; i++) { %>
+    </ul>
+    <li>
+        <%=chosenToppings[i] %>
+    </li>
+    <% } %>
+
+    <br>
+    <h2> Your total price is:</h2>
+    <h3><%=price%></h3>
+
+    <br>
+    <h2> After you confirm your order your time expected to deliver will be:</h2>
+    <h3>30 to 40 minutes.</h3>
+
+    <!--
+    <form method="get" action="/thanks" name="thanks" >
+    <button type="submit" href="thanks.ejs"> confirm order </button>
+    </form>
+
+    <form action="/" method="get">
+    <button type="submit" href="/thanks.ejs"><a href="/views/index.ejs">cancel order</a></button>
+    </form>
+    -->
+    
+    
+        <!-- Footer -->
+        <footer>
+
+        </footer>
+
+</body>
+
+</html>
